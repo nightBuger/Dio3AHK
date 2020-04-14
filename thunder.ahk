@@ -8,28 +8,9 @@ ToolTip, 武僧宏启动成功 无需重复启动
 SetTimer, RemoveToolTip, -2000
 Return
 
-SendR(){
-    Send r
-    Return
-}
-
-SendQ(){
-    Send q
-    Return
-}
-
-AutoRButton(){
-    PixelGetColor, OutputVar, 1294, 1331, RGB
-    if(OutputVar = 0x9D8B5B){
-        Send {click Right}
-    }
-}
-
-AutoLButton(){
-    Send {Click }
-}
 
 start_power(){
+    SetTimer AutoLButton,off
     Send +{Click Down}
     ;Hotkey, ~*$LButton , PushLbutton, On
     Hotkey, ~*$w , PushLbutton, On
@@ -58,7 +39,7 @@ close_power(){
         start_power()
     Return
 
-    x & LButton::
+    ~x & LButt on::
         Send {Click}}
         Sleep 50
         Send {Enter}
@@ -69,7 +50,6 @@ close_power(){
         SetTimer AutoLButton,20
     Return
 }
-
 
 
 ~*$WheelUp:: 
@@ -84,9 +64,27 @@ return
 
 PushLbutton:
     Sleep, 20
-    ;Send +{Click Up}
     Send +{Click Down}
-    ;close_power()
-    ;start_power()
+
 return
 
+SendR(){
+    Send r
+    Return
+}
+
+SendQ(){
+    Send q
+    Return
+}
+
+AutoRButton(){
+    PixelGetColor, OutputVar, 1294, 1331, RGB
+    if(OutputVar = 0x9D8B5B){
+        Send {click Right}
+    }
+}
+
+AutoLButton(){
+    Send {Click }
+}
