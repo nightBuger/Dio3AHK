@@ -21,10 +21,11 @@ AutoRButton(){
 }
 
 AutoLButton(){
-    Send +{Click Down}
+    Send {Click }
 }
 
 start_power(){
+    SetTimer AutoLButton,off
     Send +{Click Down}
     ;Hotkey, ~*$LButton , PushLbutton, On
     Hotkey, ~*$w , PushLbutton, On
@@ -46,6 +47,22 @@ close_power(){
 {
     *$WheelDown:: 
         start_power()
+    Return
+
+    ~x & LButton::
+        Send {Click}}
+        Sleep 50
+        Send {Enter}
+    Return
+
+    MButton::
+        close_power()
+        SetTimer AutoLButton,20
+    Return
+
+    `::
+        close_power()
+        SetTimer AutoLButton,20
     Return
 }
 

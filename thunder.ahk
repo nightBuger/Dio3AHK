@@ -39,13 +39,18 @@ close_power(){
         start_power()
     Return
 
-    ~x & LButt on::
+    ~x & LButton::
         Send {Click}}
         Sleep 50
         Send {Enter}
     Return
 
-    ~*$F2::
+    MButton::
+        close_power()
+        SetTimer AutoLButton,20
+    Return
+
+    `::
         close_power()
         SetTimer AutoLButton,20
     Return
