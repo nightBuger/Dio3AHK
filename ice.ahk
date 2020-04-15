@@ -31,7 +31,6 @@ start_power(){
     Hotkey, ~*$w , PushLbutton, On
     SetTimer SendR,20
     SetTimer AutoRButton,20
-    SetTimer AutoLButton,20
 }
 
 close_power(){
