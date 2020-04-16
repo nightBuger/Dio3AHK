@@ -50,10 +50,6 @@ close_power(){
         SetTimer AutoLButton,20
     Return
 
-    `::
-        close_power()
-        SetTimer AutoLButton,20
-    Return
 }
 
 
