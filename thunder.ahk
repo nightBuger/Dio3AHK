@@ -11,6 +11,7 @@ Return
 
 start_power(){
     SetTimer AutoLButton,off
+    Sleep 200
     Send +{Click Down}
     ;Hotkey, ~*$LButton , PushLbutton, On
     Hotkey, ~*$w up, PushLbutton, On
@@ -80,7 +81,12 @@ SendQ(){
 
 AutoRButton(){
     PixelGetColor, OutputVar, 1294, 1331, RGB
+    PixelGetColor, beforeOver, 1299, 1331, RGB
     if(OutputVar = 0x9D8B5B){
+        Send {click Right}
+    }
+    else if(beforeOver = 0x000000 )
+    {
         Send {click Right}
     }
 }
