@@ -64,7 +64,6 @@ ToolTip
 return
 
 PushLbutton:
-    Sleep, 20
     Send +{Click Down}
 
 return
