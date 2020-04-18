@@ -13,9 +13,9 @@ start_power(){
     SetTimer AutoLButton,off
     Send +{Click Down}
     ;Hotkey, ~*$LButton , PushLbutton, On
-    Hotkey, ~*$w , PushLbutton, On
-    Hotkey, ~*$XButton1 , PushLbutton, On
-    Hotkey, ~*$XButton2 , PushLbutton, On
+    Hotkey, ~*$w up, PushLbutton, On
+    Hotkey, ~*$XButton1 up, PushLbutton, On
+    Hotkey, ~*$XButton2 up, PushLbutton, On
     SetTimer SendR,20
     SetTimer SendQ,1000
     SetTimer AutoRButton,20
@@ -23,9 +23,9 @@ start_power(){
 
 close_power(){
     ;Hotkey, ~*$LButton ,,  off
-    Hotkey, ~*$w , PushLbutton, off
-    Hotkey, ~*$XButton1 , PushLbutton, off
-    Hotkey, ~*$XButton2 , PushLbutton, off
+    Hotkey, ~*$w up, PushLbutton, off
+    Hotkey, ~*$XButton1 up, PushLbutton, off
+    Hotkey, ~*$XButton2 up, PushLbutton, off
     Send +{Click Up}
     SetTimer SendR,off
     SetTimer SendQ,off
