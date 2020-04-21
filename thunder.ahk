@@ -18,7 +18,8 @@ start_power(){
     Hotkey, ~*$XButton1 up, PushLbutton, On
     Hotkey, ~*$XButton2 up, PushLbutton, On
     SetTimer SendR,20
-    SetTimer SendQ,1000
+    Send Q
+    SetTimer SendQ,2500
     SetTimer AutoRButton,20
 }
 
